@@ -12,20 +12,20 @@ namespace CircusTrein
 {
     public partial class Form1 : Form
     {
-        List<Dier> circusDieren;
+        List<Animal> circusDieren;
         List<Container> containers;
         public Form1()
         {
             InitializeComponent();
-            circusDieren = new List<Dier>();
+            circusDieren = new List<Animal>();
             containers = new List<Container>();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DierType dierType = (DierType) Enum.Parse(typeof(DierType),cBDierType.Text);
+            AnimalType dierType = (AnimalType) Enum.Parse(typeof(AnimalType),cBDierType.Text);
             int formaat = Convert.ToInt32(cBFormaat.Text);
-            Dier dier = new Dier(formaat, dierType);
+            Animal dier = new Animal(formaat, dierType);
             circusDieren.Add(dier);
             lBAlleDieren.Items.Add(dier);
         }
@@ -34,11 +34,11 @@ namespace CircusTrein
         {
             lBContainers.Items.Clear();
 
-            foreach (Dier dier in circusDieren)
+            foreach (Animal dier in circusDieren)
             {
-                if (dier.dierType == DierType.Vlees)
+                if (dier.AnimalType == AnimalType.Vlees)
                 {
-                    Container container = new Container(dier.formaat);
+                    Container container = new Container(dier.Size);
                     containers.Add(container);
                     AddDier(container, dier);
                 }
@@ -47,7 +47,7 @@ namespace CircusTrein
                 {
                     foreach (Container container in containers)
                     {
-                        if (dier.formaat + container.weight <= 10 && dier.formaat > container.maxFormaat)
+                        if (dier.Size + container.weight <= 10 && dier.Size > container.maxFormaat)
                         {
                             AddDier(container, dier);
                             break;
@@ -72,16 +72,16 @@ namespace CircusTrein
             lbContainerDieren.Items.Clear();
             
             Container container = lBContainers.SelectedItem as Container;
-            foreach (Dier dier in container.dieren)
+            foreach (Animal dier in container.animals)
             {
                 lbContainerDieren.Items.Add(dier);
             }
         }
 
-        void AddDier(Container container, Dier dier)
+        void AddDier(Container container, Animal dier)
         {
-            container.dieren.Add(dier);
-            container.weight += dier.formaat;
+            container.animals.Add(dier);
+            container.weight += dier.Size;
         }
     }
 }

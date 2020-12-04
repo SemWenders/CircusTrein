@@ -1,4 +1,4 @@
-﻿public enum DierType
+﻿public enum AnimalType
 {
     Vlees,
     Planten

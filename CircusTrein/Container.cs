@@ -8,15 +8,15 @@ namespace CircusTrein
 {
     class Container
     {
-        public List<Dier> dieren;
-        public int weight { get; set; }
-        public int maxFormaat { get; private set; }
+        public List<Animal> animals;
+        public int Weight { get; set; }
+        public int MaxWeight { get; private set; }
 
-        public Container(int maxFormaat = 0)
+        public Container(int maxWeight = 0)
         {
-            dieren = new List<Dier>();
-            weight = 0;
-            this.maxFormaat = maxFormaat;
+            animals = new List<Animal>();
+            Weight = 0;
+            this.MaxWeight = maxWeight;
         }
     }
 }
