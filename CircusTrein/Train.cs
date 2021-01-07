@@ -32,12 +32,6 @@ namespace CircusTrein
         
         public void AddAnimal(Animal animal)
         {
-            if (containers == null)
-            {
-                Container container = new Container();
-                containers.Add(container);
-            }
-
             foreach (var container in containers)
             {
                 if (container.Weight + animal.Size <= 10)
@@ -84,6 +78,36 @@ namespace CircusTrein
             containers.Add(newContainer);
             newContainer.AddAnimal(animal);
             return;
+        }
+
+        public void AddAnimals(List<Animal> animals)
+        {
+            //to ensure we use as little containers as possible, we first have to add the biggest animals, so that
+            //we are as efficient with our space as possible
+            foreach (var animal in animals)
+            {
+                if (animal.Size == 5)
+                {
+                    AddAnimal(animal);
+                }
+            }
+            
+            foreach (var animal in animals)
+            {
+                if (animal.Size == 3)
+                {
+                    AddAnimal(animal);
+                }
+            }
+            
+            foreach (var animal in animals)
+            {
+                if (animal.Size == 1)
+                {
+                    AddAnimal(animal);
+                }
+            }
+
         }
     }
 }

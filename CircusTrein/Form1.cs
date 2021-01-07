@@ -34,10 +34,8 @@ namespace CircusTrein
         {
             lBContainers.Items.Clear();
             train.ClearTrain();
-            foreach (Animal animal in circusAnimals)
-            {
-                train.AddAnimal(animal);
-            }
+
+            train.AddAnimals(circusAnimals);
 
             lBContainers.Items.Clear();
 
