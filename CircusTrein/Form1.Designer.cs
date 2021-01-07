@@ -39,11 +39,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(131, 44);
+            this.button1.Location = new System.Drawing.Point(175, 54);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 56);
+            this.button1.Size = new System.Drawing.Size(100, 69);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Dier toevoegen";
+            this.button1.Text = "Add animal";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -54,62 +55,71 @@
             "1",
             "3",
             "5"});
-            this.cBFormaat.Location = new System.Drawing.Point(4, 79);
+            this.cBFormaat.Location = new System.Drawing.Point(5, 97);
+            this.cBFormaat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBFormaat.Name = "cBFormaat";
-            this.cBFormaat.Size = new System.Drawing.Size(121, 21);
+            this.cBFormaat.Size = new System.Drawing.Size(160, 24);
             this.cBFormaat.TabIndex = 2;
             // 
             // cBDierType
             // 
             this.cBDierType.FormattingEnabled = true;
             this.cBDierType.Items.AddRange(new object[] {
-            "Vlees",
-            "Planten"});
-            this.cBDierType.Location = new System.Drawing.Point(4, 52);
+            "Meat",
+            "Plants"});
+            this.cBDierType.Location = new System.Drawing.Point(5, 64);
+            this.cBDierType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBDierType.Name = "cBDierType";
-            this.cBDierType.Size = new System.Drawing.Size(121, 21);
+            this.cBDierType.Size = new System.Drawing.Size(160, 24);
             this.cBDierType.TabIndex = 3;
             // 
             // lBAlleDieren
             // 
             this.lBAlleDieren.FormattingEnabled = true;
-            this.lBAlleDieren.Location = new System.Drawing.Point(4, 134);
+            this.lBAlleDieren.ItemHeight = 16;
+            this.lBAlleDieren.Location = new System.Drawing.Point(5, 165);
+            this.lBAlleDieren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBAlleDieren.Name = "lBAlleDieren";
-            this.lBAlleDieren.Size = new System.Drawing.Size(207, 238);
+            this.lBAlleDieren.Size = new System.Drawing.Size(275, 292);
             this.lBAlleDieren.TabIndex = 4;
             // 
             // lBContainers
             // 
             this.lBContainers.FormattingEnabled = true;
-            this.lBContainers.Location = new System.Drawing.Point(369, 186);
+            this.lBContainers.ItemHeight = 16;
+            this.lBContainers.Location = new System.Drawing.Point(492, 229);
+            this.lBContainers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBContainers.Name = "lBContainers";
-            this.lBContainers.Size = new System.Drawing.Size(155, 186);
+            this.lBContainers.Size = new System.Drawing.Size(205, 228);
             this.lBContainers.TabIndex = 5;
             this.lBContainers.SelectedIndexChanged += new System.EventHandler(this.lBContainers_SelectedIndexChanged);
             // 
             // lbContainerDieren
             // 
             this.lbContainerDieren.FormattingEnabled = true;
-            this.lbContainerDieren.Location = new System.Drawing.Point(577, 186);
+            this.lbContainerDieren.ItemHeight = 16;
+            this.lbContainerDieren.Location = new System.Drawing.Point(769, 229);
+            this.lbContainerDieren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbContainerDieren.Name = "lbContainerDieren";
-            this.lbContainerDieren.Size = new System.Drawing.Size(194, 186);
+            this.lbContainerDieren.Size = new System.Drawing.Size(257, 228);
             this.lbContainerDieren.TabIndex = 6;
             // 
             // btnBereken
             // 
-            this.btnBereken.Location = new System.Drawing.Point(435, 52);
+            this.btnBereken.Location = new System.Drawing.Point(580, 64);
+            this.btnBereken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBereken.Name = "btnBereken";
-            this.btnBereken.Size = new System.Drawing.Size(208, 90);
+            this.btnBereken.Size = new System.Drawing.Size(277, 111);
             this.btnBereken.TabIndex = 7;
-            this.btnBereken.Text = "Bereken";
+            this.btnBereken.Text = "Calculate";
             this.btnBereken.UseVisualStyleBackColor = true;
             this.btnBereken.Click += new System.EventHandler(this.btnBereken_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnBereken);
             this.Controls.Add(this.lbContainerDieren);
             this.Controls.Add(this.lBContainers);
@@ -117,6 +127,7 @@
             this.Controls.Add(this.cBDierType);
             this.Controls.Add(this.cBFormaat);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace CircusTrein
 {
-    class Container
+    public class Container
     {
         public List<Animal> animals;
         public int Weight { get; set; }
-        public int MaxWeight { get; private set; }
 
-        public Container(int maxWeight = 0)
+        public Container()
         {
             animals = new List<Animal>();
             Weight = 0;
-            this.MaxWeight = maxWeight;
+        }
+
+        public void AddAnimal(Animal animal)
+        {
+            animals.Add(animal);
+            Weight += animal.Size;
         }
     }
 }

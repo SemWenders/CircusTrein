@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CircusTrein
 {
-    class Animal
+    public class Animal
     {
         public int Size { get; private set; }
         public AnimalType AnimalType { get; private set; }
@@ -19,7 +19,7 @@ namespace CircusTrein
 
         public override string ToString()
         {
-            return $"{AnimalType}-etend dier van formaat: {Size}";
+            return $"{AnimalType}-eating animal of size: {Size}";
         }
     }
 }

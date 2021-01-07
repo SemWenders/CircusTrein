@@ -1,5 +1,5 @@
 ﻿public enum AnimalType
 {
-    Vlees,
-    Planten
+    Meat,
+    Plants
 }
