@@ -12,7 +12,7 @@ namespace CircusTrainTests
         /// This test-method still makes use of the old algorithm
         /// </summary>
         [TestMethod]
-        public void AddAnimals1()
+        public void CheckAlgorithm()
         {
             Train train = new Train();
             for (int i = 0; i < 3; i++)
@@ -43,7 +43,7 @@ namespace CircusTrainTests
         /// With the old algorithm this test-method would take up three containers, this only uses two
         /// </summary>
         [TestMethod]
-        public void AddAnimals2()
+        public void CheckOptimalContainerUsage()
         {
             Train train = new Train();
 
