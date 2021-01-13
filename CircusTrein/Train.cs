@@ -51,6 +51,15 @@ namespace CircusTrein
         {
             //to ensure we use as little containers as possible, we first have to add the biggest animals, so that
             //we are as efficient with our space as possible
+            AddBigAnimals(animals);
+
+            AddMediumAnimals(animals);
+
+            AddSmallAnimals(animals);
+        }
+
+        private void AddBigAnimals(List<Animal> animals)
+        {
             foreach (var animal in animals)
             {
                 if (animal.Size == 5)
@@ -58,7 +67,10 @@ namespace CircusTrein
                     AddAnimal(animal);
                 }
             }
-            
+        }
+
+        private void AddMediumAnimals(List<Animal> animals)
+        {
             foreach (var animal in animals)
             {
                 if (animal.Size == 3)
@@ -66,7 +78,10 @@ namespace CircusTrein
                     AddAnimal(animal);
                 }
             }
-            
+        }
+
+        private void AddSmallAnimals(List<Animal> animals)
+        {
             foreach (var animal in animals)
             {
                 if (animal.Size == 1)
@@ -74,7 +89,6 @@ namespace CircusTrein
                     AddAnimal(animal);
                 }
             }
-
         }
     }
 }
