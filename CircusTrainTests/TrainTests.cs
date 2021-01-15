@@ -43,7 +43,7 @@ namespace CircusTrainTests
         /// With the old algorithm this test-method would take up three containers, this only uses two
         /// </summary>
         [TestMethod]
-        public void CheckOptimalContainerUsage()
+        public void Also_adding_two_large_plant_eaters_adds_additional_wagons_specifically_for_those()
         {
             Train train = new Train();
 

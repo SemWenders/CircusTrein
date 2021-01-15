@@ -27,7 +27,7 @@ namespace CircusTrein
         {
             if (Weight + animal.Size <= 10)
             {
-                if (animal.AnimalType == AnimalType.Meat)
+                if (animal.IsMeatEating())
                 {
                     return IsMeatAnimalAble(animal, animals);
                 }
@@ -48,13 +48,13 @@ namespace CircusTrein
             foreach (var animalInContainer in animalsInContainer)
             {
                 //there can only be one meat eating animal in a container
-                if (animalInContainer.AnimalType == AnimalType.Meat)
+                if (animalInContainer.IsMeatEating())
                 {
                     return false;
                 }
 
                 //all the other animals in the container have to be bigger than the new meat eating animal
-                else if (animalInContainer.AnimalType == AnimalType.Plants && newAnimal.Size >= animalInContainer.Size)
+                else if (animalInContainer.IsPlantEating() && newAnimal.Size >= animalInContainer.Size)
                 {
                     return false;
                 }
@@ -67,7 +67,7 @@ namespace CircusTrein
         {
             foreach (var animalInContainer in animalsInContainer)
             {
-                if (animalInContainer.AnimalType == AnimalType.Meat && animalInContainer.Size >= newAnimal.Size)
+                if (animalInContainer.IsMeatEating() && animalInContainer.Size >= newAnimal.Size)
                 {
                     //the new animal would be eaten
                     return false;

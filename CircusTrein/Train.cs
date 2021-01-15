@@ -62,7 +62,7 @@ namespace CircusTrein
         {
             foreach (var animal in animals)
             {
-                if (animal.Size == 5)
+                if (animal.IsBig())
                 {
                     AddAnimal(animal);
                 }
@@ -73,7 +73,7 @@ namespace CircusTrein
         {
             foreach (var animal in animals)
             {
-                if (animal.Size == 3)
+                if (animal.IsMedium())
                 {
                     AddAnimal(animal);
                 }
@@ -84,7 +84,7 @@ namespace CircusTrein
         {
             foreach (var animal in animals)
             {
-                if (animal.Size == 1)
+                if (animal.IsSmall())
                 {
                     AddAnimal(animal);
                 }
